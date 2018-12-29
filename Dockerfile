@@ -30,3 +30,6 @@ RUN curl https://chromedriver.storage.googleapis.com/72.0.3626.7/chromedriver_li
     && unzip chromedriver \
     && chmod +x chromedriver \
     && mv chromedriver /usr/local/bin/chromedriver
+
+#install selenium   
+RUN pip install selenium
