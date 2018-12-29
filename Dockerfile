@@ -22,8 +22,9 @@ RUN curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-c
     -o /usr/local/bin/docker-compose \
     && chmod +x /usr/local/bin/docker-compose
 
+#TODO:getting permission denied at the moment 
 #increase size of /dev/shm due to failure with crhomium for the selenium testing
-RUN echo "tmpfs /dev/shm tmpfs defaults,size=256m 0 0" >> /etc/fstab && mount -o remount tmpfs
+#RUN echo "tmpfs /dev/shm tmpfs defaults,size=256m 0 0" >> /etc/fstab && mount -o remount tmpfs
 
 #install chromedriver
 RUN curl https://chromedriver.storage.googleapis.com/72.0.3626.7/chromedriver_linux64.zip --output chromedriver.zip \ 
