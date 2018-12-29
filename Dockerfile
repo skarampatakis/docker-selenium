@@ -1,6 +1,6 @@
 FROM ubuntu:xenial
 # install required packages
-RUN apt update && apt install -y unzip \
+RUN apt update && apt install --no-install-recoemmends -y unzip \
     curl \ 
     python-pip \ 
     software-properties-common \ 
@@ -14,7 +14,7 @@ RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 
 RUN add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable"
 
-RUN apt update && apt install -y docker-ce \
+RUN apt update && apt install --no-install-recommends -y docker-ce \
     && rm -rf /var/lib/apt/lists/*
 
 #manually install docker-compose
