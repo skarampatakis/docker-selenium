@@ -1,6 +1,6 @@
 FROM ubuntu:xenial
 # install required packages
-RUN apt update && apt install --no-install-recoemmends -y unzip \
+RUN apt update && apt install --no-install-recommends -y unzip \
     curl \ 
     python-pip \ 
     software-properties-common \ 
