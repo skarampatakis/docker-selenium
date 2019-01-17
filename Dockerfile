@@ -27,7 +27,7 @@ RUN curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-c
 #RUN echo "tmpfs /dev/shm tmpfs defaults,size=256m 0 0" >> /etc/fstab && mount -o remount tmpfs
 
 #install chromedriver
-RUN curl https://chromedriver.storage.googleapis.com/72.0.3626.7/chromedriver_linux64.zip --output chromedriver.zip \ 
+RUN curl https://chromedriver.storage.googleapis.com/2.45/chromedriver_linux64.zip --output chromedriver.zip \ 
     && unzip chromedriver \
     && chmod +x chromedriver \
     && mv chromedriver /usr/local/bin/chromedriver
